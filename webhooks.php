@@ -5,6 +5,16 @@ require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
 $access_token = 'jhteKXxCZOXz9jDX5SVxmrYiWEHA7qhlE+2x8kCZQiFirgbixhk87wYySaQpqK1HrJJygjuBqi2AooBQ/bGw8efgiMKHJiqQq4mCX9MaZXJWlZaXfpOspBeViumQDaFmloWKqIA8jbtFVTzzggXjkgdB04t89/1O/w1cDnyilFU=';
 
+$channelSecret = 'jhteKXxCZOXz9jDX5SVxmrYiWEHA7qhlE+2x8kCZQiFirgbixhk87wYySaQpqK1HrJJygjuBqi2AooBQ/bGw8efgiMKHJiqQq4mCX9MaZXJWlZaXfpOspBeViumQDaFmloWKqIA8jbtFVTzzggXjkgdB04t89/1O/w1cDnyilFU=';
+$idPush = 'jhteKXxCZOXz9jDX5SVxmrYiWEHA7qhlE+2x8kCZQiFirgbixhk87wYySaQpqK1HrJJygjuBqi2AooBQ/bGw8efgiMKHJiqQq4mCX9MaZXJWlZaXfpOspBeViumQDaFmloWKqIA8jbtFVTzzggXjkgdB04t89/1O/w1cDnyilFU=';
+	
+$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
+$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
+$response = $bot->pushMessage($idPush, $textMessageBuilder);
+
+echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
+
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
