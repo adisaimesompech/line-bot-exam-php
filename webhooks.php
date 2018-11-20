@@ -1,10 +1,9 @@
 <?php // callback.php
 
 require "vendor/autoload.php";
-require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
+// require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
 $access_token = 'jhteKXxCZOXz9jDX5SVxmrYiWEHA7qhlE+2x8kCZQiFirgbixhk87wYySaQpqK1HrJJygjuBqi2AooBQ/bGw8efgiMKHJiqQq4mCX9MaZXJWlZaXfpOspBeViumQDaFmloWKqIA8jbtFVTzzggXjkgdB04t89/1O/w1cDnyilFU=';
-
 $channelSecret = 'jhteKXxCZOXz9jDX5SVxmrYiWEHA7qhlE+2x8kCZQiFirgbixhk87wYySaQpqK1HrJJygjuBqi2AooBQ/bGw8efgiMKHJiqQq4mCX9MaZXJWlZaXfpOspBeViumQDaFmloWKqIA8jbtFVTzzggXjkgdB04t89/1O/w1cDnyilFU=';
 $idPush = 'jhteKXxCZOXz9jDX5SVxmrYiWEHA7qhlE+2x8kCZQiFirgbixhk87wYySaQpqK1HrJJygjuBqi2AooBQ/bGw8efgiMKHJiqQq4mCX9MaZXJWlZaXfpOspBeViumQDaFmloWKqIA8jbtFVTzzggXjkgdB04t89/1O/w1cDnyilFU=';
 	
